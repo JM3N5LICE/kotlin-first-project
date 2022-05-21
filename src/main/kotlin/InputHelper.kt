@@ -14,7 +14,7 @@ class InputHelper() {
         while (!valid) {
             println("Please enter the desired month to display(1-12) ")
             month = Integer.valueOf(readLine())
-            if (month > 0 || month < 13) {
+            if (month in 1..12) {
                 valid = true
             }
         }
@@ -23,12 +23,10 @@ class InputHelper() {
 //    return Integer.valueOf(readLine())
     }
 
-    @JvmName("getMonth1")
     fun getMonth(): Int {
         return month
     }
 
-    @JvmName("getYear1")
     fun getYear(): Int {
         return year
     }
